@@ -303,7 +303,8 @@ footer{color:var(--mute);font-size:13px;padding:0 0 40px}
 <span class="lab">Projet CESI · Module Programmation orientée objet</span>
 <h3>Le Jeu de la Vie : une simulation bien construite</h3>
 <p>La simulation de John Conway : chaque cellule vit ou meurt selon ses voisines. Le défi : un code propre, découpé en modules et facile à faire évoluer.</p>
-<div class="gol" id="gol" aria-label="Petite simulation du Jeu de la Vie sur une grille dont les bords sont reliés" role="img"></div>
+<div class="gol" id="gol" aria-label="Deux planeurs qui traversent la grille sans fin, grâce aux bords reliés" role="img"></div>
+<p class="mono" style="font-size:12px;margin-top:-2px">2 planeurs · grille torique · ils ne meurent jamais</p>
 <ul class="chips"><li>C++</li><li>SFML</li><li>SOLID</li><li>Design patterns</li></ul>
 <div class="more" id="glmore">
 <div><span class="lab">Comment c'est construit</span>
@@ -527,7 +528,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"){togs.forEac
 
 var gb=document.getElementById("gol");
 if(gb){var W=18,H=8,cells=[],st=[];for(var q=0;q<W*H;q++){var d=document.createElement("i");gb.appendChild(d);cells.push(d);st.push(0)}
-[[1,0],[2,1],[0,2],[1,2],[2,2],[11,3],[12,3],[13,3]].forEach(function(p){st[p[1]*W+p[0]]=1});
+[[1,0],[2,1],[0,2],[1,2],[2,2],[10,4],[11,5],[9,6],[10,6],[11,6]].forEach(function(p){st[p[1]*W+p[0]]=1});
 function draw(){for(var k=0;k<st.length;k++)cells[k].classList.toggle("on",st[k]===1)}
 function step(){var nx=[];for(var y=0;y<H;y++){for(var x=0;x<W;x++){var n=0;for(var dy=-1;dy<2;dy++){for(var dx=-1;dx<2;dx++){if(dx||dy){n+=st[((y+dy+H)%H)*W+((x+dx+W)%W)]}}}var a=st[y*W+x];nx.push((a&&(n===2||n===3))||(!a&&n===3)?1:0)}}st=nx;draw()}
 draw();if(!rm){setInterval(step,350)}}
@@ -740,7 +741,8 @@ var EN={
 "Mohamed Laaraj, haut de la page":"Mohamed Laaraj, back to top",
 "Présentation":"Introduction",
 "Internet, puis le datacenter, puis les 4 sites":"Internet, then the datacenter, then the 4 sites",
-"Petite simulation du Jeu de la Vie sur une grille dont les bords sont reliés":"Small Game of Life simulation on a grid with connected edges",
+"Deux planeurs qui traversent la grille sans fin, grâce aux bords reliés":"Two gliders crossing the grid forever, thanks to the connected edges",
+"2 planeurs · grille torique · ils ne meurent jamais":"2 gliders · toroidal grid · they never die",
 "Les 4 modes de la station":"The station's 4 modes",
 "Télécharger mon CV":"Download my CV",
 "Mon CV (PDF)":"My CV (PDF, in French)",
