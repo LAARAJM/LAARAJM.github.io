@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohamed Laaraj - Portfolio</title>
+<meta name="description" content="Mohamed Laaraj, élève ingénieur en informatique au CESI Strasbourg. Du développement vers la cybersécurité. Recherche un stage de 12 semaines dès janvier 2027.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect x='2' y='2' width='104' height='104' rx='22' fill='%23171E27' stroke='%235B8CFF' stroke-width='4'/%3E%3Cpolyline points='20,82 20,28 36,54 52,28 52,82' fill='none' stroke='%23E8EDF3' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolyline points='66,28 66,82 82,82' fill='none' stroke='%23E8EDF3' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='88' y='76' width='12' height='7' rx='1' fill='%23F5A524'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0F141B;--tile:#171E27;--bd:#263140;--ink:#E8EDF3;--mute:#8E9AAB;--blue:#5B8CFF;--amber:#F5A524;--green:#3DD68C;--glow:rgba(91,140,255,.10);color-scheme:dark}
+:root[data-theme="light"]{--bg:#F2F4F7;--tile:#FFFFFF;--bd:#DCE1E8;--ink:#141B24;--mute:#5B6676;--blue:#2450C7;--amber:#B86E00;--green:#178A55;--glow:rgba(36,80,199,.07);color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+header .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.logo{display:inline-flex;align-items:center;text-decoration:none;border-radius:10px}
+.lg{width:38px;height:38px;display:block}
+.lg .bx{fill:var(--tile);stroke:var(--blue);stroke-width:3}
+.lg .lt{fill:none;stroke:var(--ink);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.lg .lc{fill:var(--amber)}
+@media(prefers-reduced-motion:no-preference){.lg .lc{animation:blink 1s steps(1) infinite}}
+nav{display:flex;gap:22px;margin-left:auto}
+nav a{text-decoration:none;color:var(--mute);font-size:15px;padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover,nav a.on{color:var(--ink);border-color:var(--blue)}
+.tbtn{font:inherit;font-size:13px;color:var(--ink);background:var(--tile);border:1px solid var(--bd);border-radius:999px;padding:6px 14px;cursor:pointer}
+.hb{display:flex;gap:8px}
+@media(max-width:700px){nav{display:none}.hb{margin-left:auto}}
+section{padding:56px 0 8px}
+.part{margin-top:48px;border-top:1px solid var(--bd)}
+.sh .num{display:block;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;color:var(--mute);font-weight:400;letter-spacing:0;margin-bottom:6px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 18px}
+.sh h2{margin:0;font-size:clamp(28px,4vw,40px);font-stretch:118%;font-weight:850;letter-spacing:-.02em;line-height:1.05}
+.sh p{margin:0;color:var(--mute);max-width:46ch}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;grid-auto-rows:minmax(150px,auto)}
+.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:1/-1}.r2{grid-row:span 2}.r3{grid-row:span 3}
+@media(max-width:920px){.grid{grid-template-columns:repeat(2,1fr)}.c3{grid-column:1/-1}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.c2,.c3{grid-column:auto}.r2,.r3{grid-row:auto}}
+.t{position:relative;background:var(--tile);border:1px solid var(--bd);border-radius:20px;padding:22px;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.t.s{border-radius:14px}
+.t::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(320px circle at var(--mx,-500px) var(--my,-500px),var(--glow),transparent 60%);border-radius:inherit}
+.t.feat{border-color:color-mix(in srgb,var(--blue) 55%,var(--bd))}
+.t.sec{border-color:color-mix(in srgb,var(--amber) 60%,var(--bd))}
+.lab{font-size:13px;color:var(--mute)}
+.t h3{margin:0;font-size:20px;font-weight:750;font-stretch:108%;line-height:1.2;letter-spacing:-.01em}
+.t p{margin:0;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding:0;list-style:none}
+.chips li{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;padding:3px 9px;border:1px solid var(--bd);border-radius:999px;color:var(--mute);background:var(--bg)}
+.chips li.am{color:var(--amber);border-color:color-mix(in srgb,var(--amber) 50%,var(--bd))}
+/* Hero */
+.hero h1{margin:0;font-size:clamp(34px,4.6vw,58px);font-weight:900;font-stretch:122%;line-height:.98;letter-spacing:-.03em}
+.hero .sub{color:var(--mute);font-size:17px;max-width:44ch;margin:0}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.b{display:inline-block;text-decoration:none;font-weight:650;font-size:15px;padding:11px 18px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);cursor:pointer;font-family:inherit;color:var(--ink)}
+.b.p{background:var(--blue);border-color:var(--blue);color:#fff}
+.b:hover{border-color:var(--blue)}
+.led{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--green);margin-right:8px;vertical-align:1px}
+@media(prefers-reduced-motion:no-preference){.led{animation:pulse 2s ease-in-out infinite}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 55%,transparent)}50%{box-shadow:0 0 0 7px transparent}}}
+.status strong{font-size:18px}
+.mon{align-items:center;justify-content:center;text-align:center}
+.ph{padding:0}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .4s}
+.ph:hover img{filter:none}
+@media(max-width:600px){.ph img{height:auto;aspect-ratio:4/5}}
+.mon .ml{font-size:72px;font-weight:900;font-stretch:125%;letter-spacing:-.04em;line-height:1;background:linear-gradient(160deg,var(--blue),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+.term{background:#0A0E13;border-color:#1E2732;color:#C9D4E2;font-size:13.5px;gap:6px}
+:root[data-theme="light"] .term{background:#141B24;color:#D7DFEA}
+.term .bar{display:flex;gap:6px;margin-bottom:4px}.term .bar i{width:10px;height:10px;border-radius:50%;background:#3A4656}
+.term pre{margin:0;white-space:pre-wrap;font:inherit;min-height:7.5em}
+.term .pr{color:#5B8CFF}.cur{display:inline-block;width:8px;height:1em;background:#C9D4E2;vertical-align:-2px}
+@media(prefers-reduced-motion:no-preference){.cur{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:auto}
+@media(max-width:600px){.nums{grid-template-columns:repeat(2,1fr)}}
+.nums div{display:flex;flex-direction:column}
+.nums b{font-size:34px;font-weight:900;font-stretch:120%;line-height:1}
+.nums span{font-size:12.5px;color:var(--mute);line-height:1.3;margin-top:4px}
+/* Projets */
+.motiv{font-size:15.5px;color:var(--ink);border-left:3px solid var(--amber);padding-left:12px;margin:0;line-height:1.45}
+.goals{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:9px}
+.goals li{display:grid;grid-template-columns:16px 1fr;gap:10px;align-items:start;font-size:14px;color:var(--mute);line-height:1.4}
+.goals li b{color:var(--ink);font-weight:650;display:block}
+.goals .m{width:14px;height:14px;border-radius:50%;margin-top:3px;border:2px solid var(--bd);background:var(--bg)}
+.goals .done .m{background:var(--green);border-color:var(--green)}
+.goals .now .m{background:var(--amber);border-color:var(--amber)}
+.goals .now b{color:var(--amber)}
+@media(prefers-reduced-motion:no-preference){.goals .now .m{animation:pulseA 2s ease-in-out infinite}@keyframes pulseA{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--amber) 55%,transparent)}50%{box-shadow:0 0 0 6px transparent}}}
+.big{font-size:44px;font-weight:900;font-stretch:120%;line-height:1;color:var(--blue)}
+.more{display:none;gap:18px;grid-template-columns:1fr 1fr}
+.open .more{display:grid}
+.open{grid-column:1/-1}
+@media(max-width:760px){.more{grid-template-columns:1fr}}
+.more ul{margin:0;padding-left:18px;color:var(--mute)}.more li{margin:4px 0}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;list-style:none;padding:0;margin:6px 0 0}
+.flow li{font-size:13px;padding:6px 10px;border:1px solid var(--bd);border-radius:10px;color:var(--mute);transition:all .3s}
+.flow li.on{color:var(--ink);border-color:var(--blue);background:color-mix(in srgb,var(--blue) 14%,transparent)}
+.flow .ar{border:none;padding:0}
+.tog{align-self:flex-start;margin-top:4px}
+.sites{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:600px){.sites{grid-template-columns:1fr}}
+.sites div{border:1px solid var(--bd);border-radius:12px;padding:10px 12px;background:var(--bg)}
+.sites b{display:block;font-size:15px}.sites span{font-size:13px;color:var(--mute)}
+.arch{display:flex;flex-direction:column;align-items:center;gap:0}
+.arch .n{border:1px solid var(--bd);border-radius:10px;padding:6px 14px;font-size:13px;background:var(--bg)}
+.arch .n.dc{border-color:var(--amber);color:var(--amber)}
+.arch .v{width:1px;height:16px;background:var(--bd)}
+.arch .row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;width:100%;border-top:1px solid var(--bd);padding-top:12px;margin-top:0}
+.arch .row .n{text-align:center;padding:6px 4px;font-size:12px}
+.tech{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tech b{font-size:13px;display:block}.tech span{font-size:13px;color:var(--mute)}
+.school{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.school span{font-size:13.5px}
+@media(max-width:700px){.school{grid-template-columns:1fr}}
+.school div{border-top:1px solid var(--bd);padding-top:8px}.school b{display:block}
+.school span{color:var(--mute);font-size:14px}
+.school.two{grid-template-columns:repeat(2,1fr)}
+@media(max-width:700px){.school.two{grid-template-columns:1fr}}
+.school.four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:920px){.school.four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.school.four{grid-template-columns:1fr}}
+.gol{display:grid;grid-template-columns:repeat(18,1fr);gap:3px;margin:2px 0;max-width:560px}
+.gol i{aspect-ratio:1;border-radius:3px;background:var(--bg);border:1px solid var(--bd);transition:background .2s,border-color .2s}
+.gol i.on{background:var(--blue);border-color:var(--blue)}
+.formula{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12.5px;color:var(--ink);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:6px 10px;display:inline-block;margin-top:4px}
+.modes{display:flex;flex-wrap:wrap;gap:6px}
+.mode{font:inherit;font-size:13px;padding:6px 11px;border-radius:999px;border:1px solid var(--bd);background:var(--bg);color:var(--mute);cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:color .2s,border-color .2s}
+.mode i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.mode[aria-pressed="true"]{color:var(--ink);border-color:var(--c)}
+.mode[aria-pressed="true"] i{box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 30%,transparent)}
+.mdesc{font-size:14.5px;color:var(--ink);min-height:3.2em;border-left:3px solid var(--mc,#3DD68C);padding-left:12px;margin:0;transition:border-color .2s}
+.dim{opacity:.35;transition:opacity .2s}
+.lit{border-color:var(--blue)!important}
+.t{transition:opacity .2s,border-color .2s}
+/* Compétences */
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:7px 0;border-bottom:1px solid var(--bd);cursor:default}
+.list li:last-child{border-bottom:none}
+.list li[data-k]{cursor:pointer}
+.list li[data-k]:hover{color:var(--blue)}
+.edu{list-style:none;padding:0;margin:0}
+.edu li{display:grid;grid-template-columns:130px 1fr;gap:10px;padding:7px 0;border-bottom:1px solid var(--bd)}
+.edu li:last-child{border-bottom:none}.edu span{color:var(--mute);font-size:14px}
+@media(max-width:600px){.edu li{grid-template-columns:1fr;gap:0}}
+/* Contact */
+.contact{padding:56px 0}
+.ct{padding:34px}
+.ct h2{margin:0;font-size:clamp(28px,4vw,44px);font-weight:900;font-stretch:120%;letter-spacing:-.02em;line-height:1.05}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:all .25s;z-index:30}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{color:var(--mute);font-size:13px;padding:0 0 40px}
+/* Animation d'arrivée */
+@media(prefers-reduced-motion:no-preference){.js .hero .t{opacity:0;transform:translateY(14px) scale(.98);animation:in .45s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*70ms)}@keyframes in{to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<script>document.documentElement.className="js";try{var s=localStorage.getItem("theme");if(s)document.documentElement.setAttribute("data-theme",s)}catch(e){}</script>
+<header><div class="wrap">
+<a class="logo" href="#top" aria-label="Mohamed Laaraj, haut de la page"><svg class="lg" viewBox="0 0 108 108" aria-hidden="true"><rect class="bx" x="2" y="2" width="104" height="104" rx="22"/><polyline class="lt" points="20,82 20,28 36,54 52,28 52,82"/><polyline class="lt" points="66,28 66,82 82,82"/><rect class="lc" x="88" y="76" width="12" height="7" rx="1"/></svg></a>
+<nav aria-label="Menu"><a href="#experiences">Expériences</a><a href="#projets">Projets</a><a href="#formation">Scolarité</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></nav>
+<div class="hb"><button class="tbtn" id="lb" type="button" aria-label="Switch to English">EN</button><button class="tbtn" id="tb" type="button">Thème clair</button></div>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Présentation"><div class="wrap grid">
+<div class="t c2 r2 feat" style="--i:0">
+<span class="lab">Mohamed Laaraj, élève ingénieur en informatique</span>
+<h1>Je sais comment le code est construit. J'apprends à le protéger.</h1>
+<p class="sub">Élève ingénieur au CESI Strasbourg. 3 stages en développement, dont 13 semaines chez Mercedes-Benz Trucks.</p>
+<div class="btns"><a class="b p" href="#experiences">Voir mon parcours</a><a class="b" href="CV-Mohamed-Laaraj.pdf" target="_blank" rel="noopener">Télécharger mon CV</a></div>
+</div>
+<div class="t s status" style="--i:1">
+<span class="lab"><span class="led" aria-hidden="true"></span>Disponible</span>
+<strong>Stage de 12 semaines en cybersécurité</strong>
+<p>À partir de janvier 2027.</p>
+</div>
+<div class="t s r2 ph" style="--i:2">
+<img src="photo.jpg" alt="Photo de Mohamed Laaraj" width="282" height="352">
+</div>
+<div class="t s" style="--i:3">
+<span class="lab">Infos pratiques</span>
+<p style="color:var(--ink)">Strasbourg<br>Permis B, véhiculé</p>
+<p>Français, arabe, espagnol, anglais (B1)</p>
+</div>
+<div class="t c2 term mono" style="--i:4" aria-label="Terminal">
+<div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+<pre id="term"></pre>
+</div>
+<div class="t c2" style="--i:5">
+<span class="lab">Mes objectifs</span>
+<p class="motiv">Ce qui me motive : comprendre comment un système fonctionne, pour trouver ses failles et mieux le protéger.</p>
+<ol class="goals">
+<li class="done"><span class="m" aria-hidden="true"></span><span><b>Des bases solides en développement</b>BTS SIO et 3 stages en entreprise</span></li>
+<li class="done"><span class="m" aria-hidden="true"></span><span><b>Le réseau et mes premiers projets sécurité</b>FunkyTown, connexion sécurisée avec Azure AD</span></li>
+<li class="now"><span class="m" aria-hidden="true"></span><span><b>Janvier 2027 : un stage de 12 semaines en cybersécurité</b>Sécuriser des infrastructures, analyser des failles, protéger des systèmes</span></li>
+<li><span class="m" aria-hidden="true"></span><span><b>Ensuite : le diplôme d'ingénieur en informatique</b>Avec la cybersécurité comme métier</span></li>
+</ol>
+</div>
+</div>
+</div></section>
+
+<section id="experiences" class="part"><div class="wrap">
+<div class="sh"><h2><span class="num">01</span>Expériences</h2><p>Mes stages en entreprise : ce que j'ai fait, et ce que ça a changé.</p></div>
+<div class="grid">
+<article class="t c2 r2 feat" id="mb" data-k="angular php sql azure smtp">
+<span class="lab">Mercedes-Benz Trucks, Molsheim · Stage de 13 semaines, avril 2026</span>
+<h3>Gérer les options de plusieurs camions en une seule action</h3>
+<p>Une application pour le service Industrialisation : ajouter, modifier, remplacer ou supprimer les options d'un camion, ou de plusieurs à la fois.</p>
+<div><div class="big">30 min</div><p>gagnées chaque jour par l'équipe métier, et moins de papier imprimé.</p></div>
+<ul class="chips"><li>Angular</li><li>PHP</li><li>PostgreSQL</li><li class="am">Azure AD (SSO)</li><li>SMTP</li></ul>
+<div class="more" id="mbmore">
+<div><span class="lab">Ce que j'ai fait</span>
+<ul>
+<li>Développé les actions sur les documents d'un camion : ajouter, modifier, remplacer, supprimer une option.</li>
+<li>Rendu ces actions possibles sur plusieurs camions à la fois, avec détection automatique des doublons.</li>
+<li>Sécurisé l'accès avec une connexion unique (SSO) via Azure AD et les comptes de l'entreprise.</li>
+<li>Ajouté des alertes automatiques par e-mail et un lien avec le chat DigiProd.</li>
+<li>Créé un tutoriel interactif pour former les utilisateurs.</li>
+</ul></div>
+<div><span class="lab">Le chemin d'une modification</span>
+<ol class="flow" id="flow"><li>Camion</li><li class="ar" aria-hidden="true">→</li><li>Documents</li><li class="ar" aria-hidden="true">→</li><li>Action</li><li class="ar" aria-hidden="true">→</li><li>Traitement</li><li class="ar" aria-hidden="true">→</li><li>Alerte</li><li class="ar" aria-hidden="true">→</li><li>Utilisateurs</li></ol>
+<p style="margin-top:14px"><span style="color:var(--amber)">Lien avec la sécurité :</span> seuls les comptes de l'entreprise peuvent entrer, les droits sont gérés au même endroit et chaque connexion est tracée.</p></div>
+</div>
+<button class="b tog" type="button" aria-expanded="false" aria-controls="mbmore" data-o="Fermer le détail" data-c="Voir le détail">Voir le détail</button>
+</article>
+<article class="t s" data-k="web">
+<span class="lab">FCOSK06 · Janvier 2025, 5 semaines</span>
+<h3>Un site vitrine, et une équipe autonome</h3>
+<p>Création du site, puis formation des employés pour qu'ils le gèrent seuls.</p>
+</article>
+<article class="t s" data-k="mobile">
+<span class="lab">DAFI · Mai 2024, 6 semaines</span>
+<h3>Applications mobiles</h3>
+<p>Développement avec WinDev Mobile, tests et améliorations en équipe.</p>
+</article>
+<article class="t s c2" data-k="materiel">
+<span class="lab">Luxytech · 2022 – 2023</span>
+<h3>Réparer plutôt que jeter</h3>
+<p>Remise en état de matériel informatique et recyclage des composants.</p>
+</article>
+</div></div></section>
+
+<section id="projets" class="part"><div class="wrap">
+<div class="sh"><h2><span class="num">02</span>Projets</h2><p>Des projets réalisés au CESI et en BTS : réseau, développement web, programmation et systèmes embarqués.</p></div>
+<div class="grid">
+<article class="t c2 r2 sec" id="ft" data-k="reseau ipv6 ssh">
+<span class="lab">Projet CESI · Module Réseaux et Systèmes</span>
+<h3>FunkyTown : relier 4 sites d'entreprise autour d'un datacenter</h3>
+<p>Conception et déploiement d'un réseau complet : 4 organisations reliées à un datacenter, avec un accès Internet sécurisé et un tunnel IPv6 vers le cloud.</p>
+<div class="sites">
+<div><b>ESN eXia</b><span>Tunnel IPv6, sécurité des ports, DNS et FTP</span></div>
+<div><b>Bibliothèque</b><span>Wi-Fi public, DHCP, accès SSH</span></div>
+<div><b>ENGIE</b><span>3 VLAN, VLSM, DHCP centralisé</span></div>
+<div><b>DIGIPLEX</b><span>8 VLAN, switch de niveau 3, EtherChannel</span></div>
+</div>
+<ul class="chips"><li>Cisco</li><li>VLAN</li><li class="am">IPv6</li><li class="am">SSH</li><li>NAT</li><li>EtherChannel</li></ul>
+<div class="more" id="ftmore">
+<div><span class="lab">L'architecture</span>
+<div class="arch" aria-label="Internet, puis le datacenter, puis les 4 sites">
+<div class="n">Internet</div><div class="v"></div><div class="n dc">Datacenter</div><div class="v"></div>
+<div class="row"><div class="n">eXia</div><div class="n">Bibliothèque</div><div class="n">ENGIE</div><div class="n">DIGIPLEX</div></div>
+</div>
+<p style="margin-top:14px">Résultat : un réseau qui peut grandir, sécurisé, avec Internet pour les 4 sites, un réseau découpé par service et une administration à distance en SSH.</p></div>
+<div class="tech">
+<div><b>Réseau local</b><span>VLAN, DHCP, DNS, NAT, sécurité des ports</span></div>
+<div><b>Interconnexion</b><span>Routage statique, EtherChannel (LACP), switch de niveau 3, VTP</span></div>
+<div><b>Sécurité</b><span>SSH, WPA2-PSK, chiffrement des mots de passe</span></div>
+<div><b>Avancé</b><span>Tunnel IPv6 sur IPv4, configuration automatique IPv6 (SLAAC)</span></div>
+</div>
+</div>
+<button class="b tog" type="button" aria-expanded="false" aria-controls="ftmore" data-o="Fermer l'architecture" data-c="Voir l'architecture">Voir l'architecture</button>
+</article>
+<article class="t c2" id="jm" data-k="php sql web websec">
+<span class="lab">Projet CESI · 2025 – 2026 · Équipe de 4</span>
+<h3>Job2main : une plateforme pour trouver son stage</h3>
+<p>Un site web complet pour chercher une offre, postuler en ligne et suivre ses candidatures, avec 3 types de comptes : étudiant, pilote et administrateur.</p>
+<ul class="chips"><li>PHP</li><li>Twig</li><li>MySQL</li><li>PHPUnit</li><li class="am">Requêtes préparées</li><li class="am">Mots de passe hachés</li></ul>
+<div class="more" id="jmmore">
+<div><span class="lab">Ce que fait le site</span>
+<ul>
+<li>Recherche d'offres de stage, avec plusieurs pages de résultats.</li>
+<li>Carte de l'entreprise sur chaque offre (OpenStreetMap).</li>
+<li>Candidature en ligne avec dépôt du CV et de la lettre.</li>
+<li>Liste de souhaits, avis sur les entreprises et statistiques en graphiques.</li>
+<li>Gestion des entreprises, des offres et des étudiants selon le rôle.</li>
+</ul></div>
+<div><span class="lab" style="color:var(--amber)">La sécurité dans le code</span>
+<ul>
+<li>Requêtes préparées pour bloquer les injections SQL.</li>
+<li>Mots de passe hachés, avec un script pour migrer les anciens.</li>
+<li>Vérification du vrai type des fichiers envoyés, 2 Mo maximum.</li>
+<li>Accès aux pages limité selon le rôle de l'utilisateur.</li>
+</ul>
+<p style="margin-top:10px">Code organisé en MVC (contrôleurs, modèles, services) et testé avec PHPUnit.</p></div>
+</div>
+<button class="b tog" type="button" aria-expanded="false" aria-controls="jmmore" data-o="Fermer le détail" data-c="Voir le détail">Voir le détail</button>
+</article>
+<article class="t c2" id="gl" data-k="poo">
+<span class="lab">Projet CESI · Module Programmation orientée objet</span>
+<h3>Le Jeu de la Vie : une simulation bien construite</h3>
+<p>La simulation de John Conway : chaque cellule vit ou meurt selon ses voisines. Le défi : un code propre, découpé en modules et facile à faire évoluer.</p>
+<div class="gol" id="gol" aria-label="Petite simulation du Jeu de la Vie sur une grille dont les bords sont reliés" role="img"></div>
+<ul class="chips"><li>C++</li><li>SFML</li><li>SOLID</li><li>Design patterns</li></ul>
+<div class="more" id="glmore">
+<div><span class="lab">Comment c'est construit</span>
+<ul>
+<li>3 couches bien séparées : le moteur, la logique et l'affichage.</li>
+<li>Pattern État pour les cellules (vivante ou morte), sans longues suites de conditions.</li>
+<li>Règles d'évolution rangées dans leur propre classe, faciles à remplacer.</li>
+<li>Deux interfaces : une console qui enregistre chaque étape, et un affichage graphique en temps réel avec SFML.</li>
+</ul></div>
+<div><span class="lab">Les extras</span>
+<ul>
+<li>Grille torique : les bords sont reliés, comme dans Pac-Man. Ce qui sort à droite revient à gauche.</li>
+<li>Lecture d'un fichier de départ et sauvegarde de chaque état.</li>
+<li>Arrêt automatique quand la grille ne bouge plus.</li>
+</ul>
+<p style="margin-top:8px">Le calcul des voisins tient en une ligne, sans aucun « if » :</p>
+<span class="formula">(coordonnée + taille) % taille</span></div>
+</div>
+<button class="b tog" type="button" aria-expanded="false" aria-controls="glmore" data-o="Fermer le détail" data-c="Voir le détail">Voir le détail</button>
+</article>
+<article class="t c4" id="w3" data-k="embarque">
+<span class="lab">Projet CESI · Module Systèmes embarqués</span>
+<h3>3W : une station météo embarquée pour les navires</h3>
+<p>Un prototype de station météo pour aider à prévoir les cyclones. Elle mesure le temps, affiche les données à l'équipage et les enregistre sur une carte SD.</p>
+<div class="modes" role="group" aria-label="Les 4 modes de la station">
+<button class="mode" type="button" style="--c:#3DD68C" aria-pressed="true" data-d="Fonctionnement normal : toutes les mesures sont prises et enregistrées sur la carte SD à intervalle régulier."><i></i>Standard</button>
+<button class="mode" type="button" style="--c:#5B8CFF" aria-pressed="false" data-d="Pour économiser la batterie : mesures deux fois moins souvent, et GPS une fois sur deux."><i></i>Économique</button>
+<button class="mode" type="button" style="--c:#F2D024" aria-pressed="false" data-d="Mode technicien, au démarrage : réglage des seuils et des intervalles depuis le moniteur série."><i></i>Configuration</button>
+<button class="mode" type="button" style="--c:#FF8A3D" aria-pressed="false" data-d="Mode technicien : l'écriture sur la carte SD s'arrête pour la retirer sans risque, et les données s'affichent en direct."><i></i>Maintenance</button>
+</div>
+<p class="mdesc" id="mdesc" aria-live="polite">Fonctionnement normal : toutes les mesures sont prises et enregistrées sur la carte SD à intervalle régulier.</p>
+<ul class="chips"><li>Arduino</li><li>ATmega328</li><li>I2C</li><li>SPI</li><li>UART</li><li>GPS</li></ul>
+<div class="more" id="w3more">
+<div><span class="lab">Le matériel</span>
+<ul>
+<li>Microcontrôleur AVR ATmega328, sur une carte Arduino.</li>
+<li>Capteurs : pression, température et humidité (I2C), GPS (UART), luminosité (analogique).</li>
+<li>Carte SD (SPI) pour garder l'historique, horloge RTC (I2C) pour la date et l'heure.</li>
+<li>Une LED de couleur et 2 boutons pour piloter la station.</li>
+</ul></div>
+<div><span class="lab">Pensée pour l'équipage</span>
+<ul>
+<li>Simple à utiliser par un membre d'équipage, avec une documentation utilisateur.</li>
+<li>La couleur de la LED indique le mode en un coup d'œil.</li>
+<li>Un mode économique pour faire durer la batterie en mer.</li>
+<li>Un mode maintenance pour retirer la carte SD sans perdre de données.</li>
+</ul></div>
+</div>
+<button class="b tog" type="button" aria-expanded="false" aria-controls="w3more" data-o="Fermer le détail" data-c="Voir le détail">Voir le détail</button>
+</article>
+<article class="t c2" id="cr" data-k="php sql web">
+<span class="lab">Projet BTS SIO · 2e année · Équipe de 3</span>
+<h3>Criée de Cornouailles : enchérir à distance, en direct</h3>
+<p>Une plateforme web pour acheter du poisson aux enchères sans être sur place : offres en temps réel, plus de transparence et moins de déplacements.</p>
+<div class="sites">
+<div><b>Espace acheteurs</b><span>Enchères en cours et à venir, offres en direct, notifications, commande une fois l'enchère gagnée</span></div>
+<div><b>Espace administrateur</b><span>Création et gestion des lots de poissons, suivi des enchères</span></div>
+</div>
+<ul class="chips"><li>PHP</li><li>CodeIgniter 3</li><li>MVC</li><li>MySQL</li><li>JavaScript</li><li class="am">Authentification et droits</li></ul>
+<div class="more" id="crmore">
+<div><span class="lab">Comment c'est construit</span>
+<ul>
+<li>Architecture MVC avec CodeIgniter : les données, la logique et l'affichage sont bien séparés.</li>
+<li>Back-end en PHP et MySQL pour gérer les utilisateurs, les enchères et les transactions.</li>
+<li>Interface en HTML, CSS et JavaScript, simple pour les professionnels comme pour les particuliers.</li>
+<li>Accès aux enchères réservé aux comptes autorisés.</li>
+</ul></div>
+<div><span class="lab">Ce que ça m'a appris</span>
+<ul>
+<li>Mieux gérer une base de données MySQL et optimiser le PHP.</li>
+<li>Utiliser le modèle MVC avec un vrai framework.</li>
+<li>Rendre une interface interactive avec CSS et JavaScript.</li>
+<li>Comprendre les contraintes des enchères en ligne et des transactions.</li>
+</ul></div>
+</div>
+<button class="b tog" type="button" aria-expanded="false" aria-controls="crmore" data-o="Fermer le détail" data-c="Voir le détail">Voir le détail</button>
+</article>
+<article class="t c2" id="cc" data-k="sql csharp">
+<span class="lab">Projet BTS SIO · 2e année · Équipe de 3</span>
+<h3>Crédit Céleste : l'application d'une concession automobile</h3>
+<p>Faire évoluer une application qui vendait seulement des voitures neuves avec crédit : ajout des voitures d'occasion, des reprises, de l'entretien, des réparations et des assurances.</p>
+<div><span class="lab">Le parcours du client</span>
+<ol class="flow"><li>Choix du véhicule</li><li class="ar" aria-hidden="true">→</li><li>Reprise</li><li class="ar" aria-hidden="true">→</li><li>Assurance</li><li class="ar" aria-hidden="true">→</li><li>Paiement</li><li class="ar" aria-hidden="true">→</li><li>Résumé</li></ol></div>
+<ul class="chips"><li>C#</li><li>Windows Forms</li><li>SQL Server</li><li>Windows Server 2022</li><li>Visual Studio</li></ul>
+<div class="more" id="ccmore">
+<div><span class="lab">Ce que gère l'application</span>
+<ul>
+<li>Achat de voitures neuves ou d'occasion, avec filtres (marque, prix, kilométrage, puissance).</li>
+<li>Entretien et réparations, avec suivi des interventions et du stock de pièces.</li>
+<li>Reprise ou vente de la voiture du client, avec une estimation automatique de sa valeur.</li>
+<li>Paiement avec plusieurs options, dont le crédit auto, et choix de l'assurance.</li>
+</ul></div>
+<div><span class="lab">Technique et apprentissages</span>
+<ul>
+<li>Application de bureau en C# avec Windows Forms, sur Visual Studio.</li>
+<li>Base SQL Server de 9 tables, hébergée sur Windows Server 2022.</li>
+<li>Progrès en C#, en SQL Server et en gestion d'un serveur Windows.</li>
+</ul></div>
+</div>
+<button class="b tog" type="button" aria-expanded="false" aria-controls="ccmore" data-o="Fermer le détail" data-c="Voir le détail">Voir le détail</button>
+</article>
+</div></div></section>
+
+<section id="formation" class="part"><div class="wrap">
+<div class="sh"><h2><span class="num">03</span>Scolarité</h2><p>Ma formation et mes certifications.</p></div>
+<div class="grid">
+<div class="t c2 feat">
+<span class="lab"><span class="led" aria-hidden="true"></span>Depuis septembre 2026 · En cours</span>
+<h3>Cycle ingénieur en informatique</h3>
+<p>CESI Strasbourg (Lingolsheim). Je me tourne vers la cybersécurité.</p>
+</div>
+<div class="t s">
+<span class="lab">2025 – 2026</span>
+<h3>Cycle préparatoire ingénieur (CPI A2)</h3>
+<p>CESI. Mineure sciences du numérique et informatique.</p>
+</div>
+<div class="t s">
+<span class="lab">2023 – 2025</span>
+<h3>BTS SIO, option SLAM</h3>
+<p>Lycée René Cassin, Strasbourg. Développement d'applications.</p>
+</div>
+<div class="t s c4">
+<span class="lab">Certifications</span>
+<div class="school four">
+<div><b>MOOC SecNumacadémie</b><span>ANSSI. Les bases de la cybersécurité.</span></div>
+<div><b>Cybersecurity Essentials</b><span>Cisco. Menaces, protections et bonnes pratiques.</span></div>
+<div><b>Linux Essentials</b><span>Les bases de Linux et de la ligne de commande.</span></div>
+<div><b>Attestation PIX</b><span>Certification des compétences numériques.</span></div>
+</div>
+</div>
+</div></div></section>
+
+<section id="competences" class="part"><div class="wrap">
+<div class="sh"><h2><span class="num">04</span>Compétences</h2><p>Le code comme base, la sécurité comme direction. Survolez une compétence pour voir où je l'ai utilisée.</p></div>
+<div class="grid">
+<div class="t c2">
+<span class="lab">Mon angle</span>
+<p style="color:var(--ink);font-size:18px;line-height:1.45">Je viens du code. Je sais comment une application est construite : la base de données, le serveur, l'interface. Pour protéger un système, il faut d'abord comprendre comment il fonctionne.</p>
+</div>
+<div class="t c2 r3 sec">
+<span class="lab" style="color:var(--amber)">Ma direction</span>
+<h3>Réseau et sécurité</h3>
+<ul class="list">
+<li data-k="azure">Connexion unique (SSO) avec Azure AD</li>
+<li data-k="reseau">VLAN, VLSM, routage statique, switch de niveau 3</li>
+<li data-k="reseau">EtherChannel (LACP), VTP, NAT</li>
+<li data-k="ipv6">Tunnel IPv6 sur IPv4, SLAAC</li>
+<li data-k="ssh">SSH, sécurité des ports, WPA2</li>
+<li data-k="websec">Requêtes préparées, hachage des mots de passe</li>
+<li>TCP/IP, DNS, DHCP, Wireshark, Cisco Packet Tracer</li>
+<li>Certifications ANSSI, Cisco et Linux Essentials</li>
+</ul>
+</div>
+<div class="t s">
+<span class="lab">Langages</span>
+<div class="big" style="font-size:38px">9</div>
+<p>Java, C#, C++, PHP, Python, JavaScript, VB, VBA, PowerShell</p>
+</div>
+<div class="t s">
+<span class="lab">Web et données</span>
+<ul class="list">
+<li data-k="angular">Angular</li><li data-k="php">PHP</li><li data-k="sql">SQL, MySQL, PostgreSQL, SQL Server</li><li data-k="web">HTML, CSS</li>
+</ul>
+</div>
+<div class="t s">
+<span class="lab">Outils</span>
+<p>Git, GitHub, CI/CD, Jira, Visual Studio, VirtualBox, WinDev, PHPUnit, Arduino, Windows Server 2022</p>
+</div>
+<div class="t s">
+<span class="lab">Méthodes</span>
+<ul class="list"><li data-k="poo">Programmation objet, SOLID, design patterns</li><li data-k="websec">Tests unitaires</li><li>Documentation, méthodes Agiles</li></ul>
+</div>
+
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div class="t ct feat">
+<span class="lab"><span class="led" aria-hidden="true"></span>Disponible dès janvier 2027</span>
+<h2>Vous cherchez un stagiaire en cybersécurité ? Parlons-en.</h2>
+<div class="btns" style="margin-top:12px">
+<button class="b p" id="mail" type="button" data-mail="mohamedlaaraj.67380@gmail.com">mohamedlaaraj.67380@gmail.com</button>
+<a class="b" href="tel:+33779679803">07 79 67 98 03</a>
+<a class="b" href="https://www.linkedin.com/in/mohamed-laaraj" target="_blank" rel="noopener">LinkedIn</a>
+<a class="b" href="https://github.com/LAARAJM" target="_blank" rel="noopener">GitHub</a>
+<a class="b" href="CV-Mohamed-Laaraj.pdf" target="_blank" rel="noopener">Mon CV (PDF)</a>
+</div>
+<p style="font-size:13px">Clic sur l'adresse : elle est copiée.</p>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Mohamed Laaraj · Strasbourg</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+var root=document.documentElement,rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var tb=document.getElementById("tb");
+var LANG="fr";
+function lab(){var l=root.getAttribute("data-theme")==="light";tb.textContent=LANG==="en"?(l?"Dark theme":"Light theme"):(l?"Thème sombre":"Thème clair")}
+lab();
+tb.onclick=function(){var n=root.getAttribute("data-theme")==="light"?"dark":"light";root.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}lab()};
+
+var LFR=[["$ ","whoami"],["","mohamed.laaraj, élève ingénieur, CESI Strasbourg"],["$ ","cat parcours.txt"],["","code → réseau → sécurité"],["$ ","echo $OBJECTIF"],["","stage cybersécurité, janvier 2027"]];
+var LEN=[["$ ","whoami"],["","mohamed.laaraj, engineering student, CESI Strasbourg"],["$ ","cat path.txt"],["","code → network → security"],["$ ","echo $GOAL"],["","cybersecurity internship, January 2027"]];
+var lines=LFR,typing=true;
+var term=document.getElementById("term");
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function render(n){var out="",left=n;for(var i=0;i<lines.length;i++){var full=lines[i][1];var take=Math.min(full.length,Math.max(0,left));left-=full.length;out+=(lines[i][0]?'<span class="pr">'+lines[i][0]+"</span>":"")+esc(full.slice(0,take));if(take<full.length){return out+'<span class="cur"></span>'}out+=String.fromCharCode(10)}return out+'<span class="pr">$ </span><span class="cur"></span>'}
+function tot(){var t=0;for(var j=0;j<lines.length;j++)t+=lines[j][1].length;return t}
+var total=tot();
+if(rm){typing=false;term.innerHTML=render(total)}else{var c=0;setTimeout(function step(){c++;term.innerHTML=render(c);if(c<total){setTimeout(step,25)}else{typing=false}},500)}
+
+document.querySelectorAll(".t").forEach(function(t){t.addEventListener("pointermove",function(e){var r=t.getBoundingClientRect();t.style.setProperty("--mx",(e.clientX-r.left)+"px");t.style.setProperty("--my",(e.clientY-r.top)+"px")});t.addEventListener("pointerleave",function(){t.style.setProperty("--mx","-500px")})});
+
+var steps=document.querySelectorAll("#flow li:not(.ar)"),timers=[];
+function lightFlow(){timers.forEach(clearTimeout);timers=[];steps.forEach(function(s){s.classList.remove("on")});steps.forEach(function(s,i){if(rm){s.classList.add("on")}else{timers.push(setTimeout(function(){s.classList.add("on")},250+i*300))}})}
+var togs=document.querySelectorAll(".tog");
+function setOpen(btn,o){var art=btn.closest("article");art.classList.toggle("open",o);btn.setAttribute("aria-expanded",o?"true":"false");btn.textContent=o?btn.getAttribute("data-o"):btn.getAttribute("data-c");if(o&&art.id==="mb")lightFlow()}
+togs.forEach(function(btn){btn.onclick=function(){setOpen(btn,!btn.closest("article").classList.contains("open"))}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){togs.forEach(function(btn){if(btn.closest("article").classList.contains("open")){setOpen(btn,false);btn.focus()}})}});
+
+var gb=document.getElementById("gol");
+if(gb){var W=18,H=8,cells=[],st=[];for(var q=0;q<W*H;q++){var d=document.createElement("i");gb.appendChild(d);cells.push(d);st.push(0)}
+[[1,0],[2,1],[0,2],[1,2],[2,2],[11,3],[12,3],[13,3]].forEach(function(p){st[p[1]*W+p[0]]=1});
+function draw(){for(var k=0;k<st.length;k++)cells[k].classList.toggle("on",st[k]===1)}
+function step(){var nx=[];for(var y=0;y<H;y++){for(var x=0;x<W;x++){var n=0;for(var dy=-1;dy<2;dy++){for(var dx=-1;dx<2;dx++){if(dx||dy){n+=st[((y+dy+H)%H)*W+((x+dx+W)%W)]}}}var a=st[y*W+x];nx.push((a&&(n===2||n===3))||(!a&&n===3)?1:0)}}st=nx;draw()}
+draw();if(!rm){setInterval(step,350)}}
+
+var modes=document.querySelectorAll(".mode"),mdesc=document.getElementById("mdesc");
+modes.forEach(function(m){m.onclick=function(){modes.forEach(function(o){o.setAttribute("aria-pressed","false")});m.setAttribute("aria-pressed","true");mdesc.textContent=m.getAttribute("data-d");mdesc.style.setProperty("--mc",m.style.getPropertyValue("--c"))}});
+
+var cards=document.querySelectorAll("#experiences .t[data-k], #projets .t[data-k]");
+document.querySelectorAll("#competences li[data-k]").forEach(function(li){li.tabIndex=0;function on(){var k=li.getAttribute("data-k");cards.forEach(function(c){var hit=(" "+c.getAttribute("data-k")+" ").indexOf(" "+k+" ")>-1;c.classList.toggle("lit",hit);c.classList.toggle("dim",!hit)});var first=document.querySelector(".lit");if(first)first.scrollIntoView({behavior:rm?"auto":"smooth",block:"center"})}function off(){cards.forEach(function(c){c.classList.remove("lit","dim")})}li.addEventListener("mouseenter",function(){var k=li.getAttribute("data-k");cards.forEach(function(c){var hit=(" "+c.getAttribute("data-k")+" ").indexOf(" "+k+" ")>-1;c.classList.toggle("lit",hit);c.classList.toggle("dim",!hit)})});li.addEventListener("mouseleave",off);li.addEventListener("click",on);li.addEventListener("keydown",function(e){if(e.key==="Enter")on()});li.addEventListener("blur",off)});
+
+var mail=document.getElementById("mail"),toast=document.getElementById("toast");
+mail.onclick=function(){var a=mail.getAttribute("data-mail");function done(m){toast.textContent=LANG==="en"?"Address copied":m;toast.classList.add("show");setTimeout(function(){toast.classList.remove("show")},1500)}if(navigator.clipboard){navigator.clipboard.writeText(a).then(function(){done("Adresse copiée")},function(){location.href="mailto:"+a})}else{location.href="mailto:"+a}};
+
+var links=document.querySelectorAll("nav a"),secs=["experiences","projets","formation","competences","contact"].map(function(id){return document.getElementById(id)});
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});secs.forEach(function(s){io.observe(s)})}
+var EN={
+"Expériences":"Experience",
+"Projets":"Projects",
+"Scolarité":"Education",
+"Compétences":"Skills",
+"Mohamed Laaraj, élève ingénieur en informatique":"Mohamed Laaraj, computer science engineering student",
+"Je sais comment le code est construit. J'apprends à le protéger.":"I know how code is built. Now I'm learning to protect it.",
+"Élève ingénieur au CESI Strasbourg. 3 stages en développement, dont 13 semaines chez Mercedes-Benz Trucks.":"Engineering student at CESI Strasbourg. 3 software development internships, including 13 weeks at Mercedes-Benz Trucks.",
+"Voir mon parcours":"See my background",
+"Me contacter":"Contact me",
+"Disponible":"Available",
+"Stage de 12 semaines en cybersécurité":"12-week cybersecurity internship",
+"À partir de janvier 2027.":"Starting January 2027.",
+"code → réseau → sécurité":"code → network → security",
+"Infos pratiques":"Practical info",
+"Permis B, véhiculé":"Driving licence, own car",
+"Français, arabe, espagnol, anglais (B1)":"French, Arabic, Spanish, English (B1)",
+"Mes objectifs":"My goals",
+"Ce qui me motive : comprendre comment un système fonctionne, pour trouver ses failles et mieux le protéger.":"What drives me: understanding how a system works, to find its weaknesses and protect it better.",
+"Des bases solides en développement":"Strong foundations in software development",
+"BTS SIO et 3 stages en entreprise":"BTS SIO (2-year IT degree) and 3 internships",
+"Le réseau et mes premiers projets sécurité":"Networking and my first security projects",
+"FunkyTown, connexion sécurisée avec Azure AD":"FunkyTown, secure sign-in with Azure AD",
+"Janvier 2027 : un stage de 12 semaines en cybersécurité":"January 2027: a 12-week cybersecurity internship",
+"Sécuriser des infrastructures, analyser des failles, protéger des systèmes":"Securing infrastructure, analysing vulnerabilities, protecting systems",
+"Ensuite : le diplôme d'ingénieur en informatique":"Next: my engineering degree in computer science",
+"Avec la cybersécurité comme métier":"With cybersecurity as my career",
+"Mes stages en entreprise : ce que j'ai fait, et ce que ça a changé.":"My internships: what I did, and what it changed.",
+"Mercedes-Benz Trucks, Molsheim · Stage de 13 semaines, avril 2026":"Mercedes-Benz Trucks, Molsheim · 13-week internship, April 2026",
+"Gérer les options de plusieurs camions en une seule action":"Managing options for several trucks in a single action",
+"Une application pour le service Industrialisation : ajouter, modifier, remplacer ou supprimer les options d'un camion, ou de plusieurs à la fois.":"An application for the Industrialisation department: add, edit, replace or delete options on one truck, or on several at once.",
+"gagnées chaque jour par l'équipe métier, et moins de papier imprimé.":"saved every day by the business team, and less paper printed.",
+"Ce que j'ai fait":"What I did",
+"Développé les actions sur les documents d'un camion : ajouter, modifier, remplacer, supprimer une option.":"Built the actions on a truck's documents: add, edit, replace and delete an option.",
+"Rendu ces actions possibles sur plusieurs camions à la fois, avec détection automatique des doublons.":"Made these actions work on several trucks at once, with automatic duplicate detection.",
+"Sécurisé l'accès avec une connexion unique (SSO) via Azure AD et les comptes de l'entreprise.":"Secured access with single sign-on (SSO) through Azure AD and company accounts.",
+"Ajouté des alertes automatiques par e-mail et un lien avec le chat DigiProd.":"Added automatic email alerts and a link with the DigiProd chat.",
+"Créé un tutoriel interactif pour former les utilisateurs.":"Created an interactive tutorial to train users.",
+"Le chemin d'une modification":"How a change flows",
+"Camion":"Truck",
+"Traitement":"Processing",
+"Alerte":"Alert",
+"Utilisateurs":"Users",
+"Lien avec la sécurité :":"Security angle:",
+"seuls les comptes de l'entreprise peuvent entrer, les droits sont gérés au même endroit et chaque connexion est tracée.":"only company accounts can get in, permissions are managed in one place and every sign-in is logged.",
+"Voir le détail":"See details",
+"Fermer le détail":"Close details",
+"FCOSK06 · Janvier 2025, 5 semaines":"FCOSK06 · January 2025, 5 weeks",
+"Un site vitrine, et une équipe autonome":"A showcase website, and a self-sufficient team",
+"Création du site, puis formation des employés pour qu'ils le gèrent seuls.":"Built the website, then trained the staff to manage it on their own.",
+"DAFI · Mai 2024, 6 semaines":"DAFI · May 2024, 6 weeks",
+"Applications mobiles":"Mobile applications",
+"Développement avec WinDev Mobile, tests et améliorations en équipe.":"Development with WinDev Mobile, testing and improvements with the team.",
+"Réparer plutôt que jeter":"Repair rather than throw away",
+"Remise en état de matériel informatique et recyclage des composants.":"Refurbishing computer hardware and recycling components.",
+"Des projets réalisés au CESI et en BTS : réseau, développement web, programmation et systèmes embarqués.":"Projects completed at CESI and during my BTS: networking, web development, programming and embedded systems.",
+"Projet CESI · Module Réseaux et Systèmes":"CESI project · Networks and Systems module",
+"FunkyTown : relier 4 sites d'entreprise autour d'un datacenter":"FunkyTown: connecting 4 company sites through a datacenter",
+"Conception et déploiement d'un réseau complet : 4 organisations reliées à un datacenter, avec un accès Internet sécurisé et un tunnel IPv6 vers le cloud.":"Designing and deploying a complete network: 4 organisations connected to a datacenter, with secure Internet access and an IPv6 tunnel to the cloud.",
+"Tunnel IPv6, sécurité des ports, DNS et FTP":"IPv6 tunnel, port security, DNS and FTP",
+"Bibliothèque":"Library",
+"Wi-Fi public, DHCP, accès SSH":"Public Wi-Fi, DHCP, SSH access",
+"3 VLAN, VLSM, DHCP centralisé":"3 VLANs, VLSM, centralised DHCP",
+"8 VLAN, switch de niveau 3, EtherChannel":"8 VLANs, layer 3 switch, EtherChannel",
+"L'architecture":"The architecture",
+"Résultat : un réseau qui peut grandir, sécurisé, avec Internet pour les 4 sites, un réseau découpé par service et une administration à distance en SSH.":"Result: a scalable, secure network, with Internet for all 4 sites, segmented by department and managed remotely over SSH.",
+"Réseau local":"Local network",
+"VLAN, DHCP, DNS, NAT, sécurité des ports":"VLANs, DHCP, DNS, NAT, port security",
+"Interconnexion":"Interconnection",
+"Routage statique, EtherChannel (LACP), switch de niveau 3, VTP":"Static routing, EtherChannel (LACP), layer 3 switch, VTP",
+"Sécurité":"Security",
+"SSH, WPA2-PSK, chiffrement des mots de passe":"SSH, WPA2-PSK, password encryption",
+"Avancé":"Advanced",
+"Tunnel IPv6 sur IPv4, configuration automatique IPv6 (SLAAC)":"IPv6 over IPv4 tunnel, IPv6 auto-configuration (SLAAC)",
+"Voir l'architecture":"See the architecture",
+"Fermer l'architecture":"Close the architecture",
+"Projet CESI · 2025 – 2026 · Équipe de 4":"CESI project · 2025 – 2026 · Team of 4",
+"Job2main : une plateforme pour trouver son stage":"Job2main: a platform to find an internship",
+"Un site web complet pour chercher une offre, postuler en ligne et suivre ses candidatures, avec 3 types de comptes : étudiant, pilote et administrateur.":"A complete website to search for offers, apply online and track applications, with 3 account types: student, supervisor and administrator.",
+"Requêtes préparées":"Prepared statements",
+"Mots de passe hachés":"Hashed passwords",
+"Ce que fait le site":"What the site does",
+"Recherche d'offres de stage, avec plusieurs pages de résultats.":"Internship search, with paginated results.",
+"Carte de l'entreprise sur chaque offre (OpenStreetMap).":"Company map on every offer (OpenStreetMap).",
+"Candidature en ligne avec dépôt du CV et de la lettre.":"Online applications with CV and cover letter upload.",
+"Liste de souhaits, avis sur les entreprises et statistiques en graphiques.":"Wishlist, company reviews and statistics charts.",
+"Gestion des entreprises, des offres et des étudiants selon le rôle.":"Management of companies, offers and students depending on the role.",
+"La sécurité dans le code":"Security in the code",
+"Requêtes préparées pour bloquer les injections SQL.":"Prepared statements to block SQL injection.",
+"Mots de passe hachés, avec un script pour migrer les anciens.":"Hashed passwords, with a script to migrate old ones.",
+"Vérification du vrai type des fichiers envoyés, 2 Mo maximum.":"Checking the real type of uploaded files, 2 MB maximum.",
+"Accès aux pages limité selon le rôle de l'utilisateur.":"Page access restricted by user role.",
+"Code organisé en MVC (contrôleurs, modèles, services) et testé avec PHPUnit.":"Code organised in MVC (controllers, models, services) and tested with PHPUnit.",
+"Projet CESI · Module Programmation orientée objet":"CESI project · Object-Oriented Programming module",
+"Le Jeu de la Vie : une simulation bien construite":"The Game of Life: a well-built simulation",
+"La simulation de John Conway : chaque cellule vit ou meurt selon ses voisines. Le défi : un code propre, découpé en modules et facile à faire évoluer.":"John Conway's simulation: each cell lives or dies depending on its neighbours. The challenge: clean, modular code that is easy to extend.",
+"Comment c'est construit":"How it's built",
+"3 couches bien séparées : le moteur, la logique et l'affichage.":"3 clearly separated layers: engine, logic and display.",
+"Pattern État pour les cellules (vivante ou morte), sans longues suites de conditions.":"State pattern for cells (alive or dead), without long chains of conditions.",
+"Règles d'évolution rangées dans leur propre classe, faciles à remplacer.":"Evolution rules kept in their own class, easy to replace.",
+"Deux interfaces : une console qui enregistre chaque étape, et un affichage graphique en temps réel avec SFML.":"Two interfaces: a console that logs every step, and a real-time graphical display with SFML.",
+"Les extras":"The extras",
+"Grille torique : les bords sont reliés, comme dans Pac-Man. Ce qui sort à droite revient à gauche.":"Toroidal grid: the edges are connected, like in Pac-Man. What leaves on the right comes back on the left.",
+"Lecture d'un fichier de départ et sauvegarde de chaque état.":"Reads a starting file and saves every state.",
+"Arrêt automatique quand la grille ne bouge plus.":"Stops automatically when the grid stops changing.",
+"Le calcul des voisins tient en une ligne, sans aucun « if » :":"Finding neighbours takes one line, without a single if statement:",
+"(coordonnée + taille) % taille":"(coordinate + size) % size",
+"Projet CESI · Module Systèmes embarqués":"CESI project · Embedded Systems module",
+"3W : une station météo embarquée pour les navires":"3W: an on-board weather station for ships",
+"Un prototype de station météo pour aider à prévoir les cyclones. Elle mesure le temps, affiche les données à l'équipage et les enregistre sur une carte SD.":"A weather station prototype to help forecast cyclones. It takes measurements, shows the data to the crew and saves it to an SD card.",
+"Économique":"Eco",
+"Fonctionnement normal : toutes les mesures sont prises et enregistrées sur la carte SD à intervalle régulier.":"Normal operation: all measurements are taken and saved to the SD card at regular intervals.",
+"Pour économiser la batterie : mesures deux fois moins souvent, et GPS une fois sur deux.":"To save battery: half as many measurements, and GPS only every other time.",
+"Mode technicien, au démarrage : réglage des seuils et des intervalles depuis le moniteur série.":"Technician mode, at start-up: setting thresholds and intervals from the serial monitor.",
+"Mode technicien : l'écriture sur la carte SD s'arrête pour la retirer sans risque, et les données s'affichent en direct.":"Technician mode: SD card writing stops so it can be removed safely, and data is shown live.",
+"Le matériel":"The hardware",
+"Microcontrôleur AVR ATmega328, sur une carte Arduino.":"AVR ATmega328 microcontroller, on an Arduino board.",
+"Capteurs : pression, température et humidité (I2C), GPS (UART), luminosité (analogique).":"Sensors: pressure, temperature and humidity (I2C), GPS (UART), light (analogue).",
+"Carte SD (SPI) pour garder l'historique, horloge RTC (I2C) pour la date et l'heure.":"SD card (SPI) to keep the history, RTC clock (I2C) for date and time.",
+"Une LED de couleur et 2 boutons pour piloter la station.":"A colour LED and 2 buttons to control the station.",
+"Pensée pour l'équipage":"Designed for the crew",
+"Simple à utiliser par un membre d'équipage, avec une documentation utilisateur.":"Easy for a crew member to use, with a user guide.",
+"La couleur de la LED indique le mode en un coup d'œil.":"The LED colour shows the mode at a glance.",
+"Un mode économique pour faire durer la batterie en mer.":"An eco mode to make the battery last at sea.",
+"Un mode maintenance pour retirer la carte SD sans perdre de données.":"A maintenance mode to remove the SD card without losing data.",
+"Projet BTS SIO · 2e année · Équipe de 3":"BTS SIO project · 2nd year · Team of 3",
+"Criée de Cornouailles : enchérir à distance, en direct":"Criée de Cornouailles: bidding remotely, live",
+"Une plateforme web pour acheter du poisson aux enchères sans être sur place : offres en temps réel, plus de transparence et moins de déplacements.":"A web platform to buy fish at auction without being there: real-time bids, more transparency and less travel.",
+"Espace acheteurs":"Buyer area",
+"Enchères en cours et à venir, offres en direct, notifications, commande une fois l'enchère gagnée":"Current and upcoming auctions, live bids, notifications, order once the auction is won",
+"Espace administrateur":"Admin area",
+"Création et gestion des lots de poissons, suivi des enchères":"Creating and managing fish lots, monitoring auctions",
+"Authentification et droits":"Authentication and permissions",
+"Architecture MVC avec CodeIgniter : les données, la logique et l'affichage sont bien séparés.":"MVC architecture with CodeIgniter: data, logic and display are clearly separated.",
+"Back-end en PHP et MySQL pour gérer les utilisateurs, les enchères et les transactions.":"PHP and MySQL back end to manage users, auctions and transactions.",
+"Interface en HTML, CSS et JavaScript, simple pour les professionnels comme pour les particuliers.":"HTML, CSS and JavaScript interface, simple for professionals and individuals alike.",
+"Accès aux enchères réservé aux comptes autorisés.":"Auction access restricted to authorised accounts.",
+"Ce que ça m'a appris":"What I learned",
+"Mieux gérer une base de données MySQL et optimiser le PHP.":"Managing a MySQL database better and optimising PHP.",
+"Utiliser le modèle MVC avec un vrai framework.":"Using the MVC pattern with a real framework.",
+"Rendre une interface interactive avec CSS et JavaScript.":"Making an interface interactive with CSS and JavaScript.",
+"Comprendre les contraintes des enchères en ligne et des transactions.":"Understanding the constraints of online auctions and transactions.",
+"Crédit Céleste : l'application d'une concession automobile":"Crédit Céleste: a car dealership application",
+"Faire évoluer une application qui vendait seulement des voitures neuves avec crédit : ajout des voitures d'occasion, des reprises, de l'entretien, des réparations et des assurances.":"Upgrading an application that only sold new cars on credit: adding used cars, trade-ins, servicing, repairs and insurance.",
+"Le parcours du client":"The customer journey",
+"Choix du véhicule":"Choosing a vehicle",
+"Reprise":"Trade-in",
+"Assurance":"Insurance",
+"Paiement":"Payment",
+"Résumé":"Summary",
+"Ce que gère l'application":"What the application handles",
+"Achat de voitures neuves ou d'occasion, avec filtres (marque, prix, kilométrage, puissance).":"Buying new or used cars, with filters (brand, price, mileage, power).",
+"Entretien et réparations, avec suivi des interventions et du stock de pièces.":"Servicing and repairs, with tracking of jobs and parts stock.",
+"Reprise ou vente de la voiture du client, avec une estimation automatique de sa valeur.":"Trade-in or sale of the customer's car, with an automatic value estimate.",
+"Paiement avec plusieurs options, dont le crédit auto, et choix de l'assurance.":"Payment with several options, including car finance, and choice of insurance.",
+"Technique et apprentissages":"Tech and what I learned",
+"Application de bureau en C# avec Windows Forms, sur Visual Studio.":"Desktop application in C# with Windows Forms, in Visual Studio.",
+"Base SQL Server de 9 tables, hébergée sur Windows Server 2022.":"SQL Server database with 9 tables, hosted on Windows Server 2022.",
+"Progrès en C#, en SQL Server et en gestion d'un serveur Windows.":"Progress in C#, SQL Server and managing a Windows server.",
+"Ma formation et mes certifications.":"My education and certifications.",
+"Depuis septembre 2026 · En cours":"Since September 2026 · In progress",
+"Cycle ingénieur en informatique":"Engineering degree in computer science",
+"CESI Strasbourg (Lingolsheim). Je me tourne vers la cybersécurité.":"CESI Strasbourg (Lingolsheim). Moving towards cybersecurity.",
+"Cycle préparatoire ingénieur (CPI A2)":"Engineering preparatory cycle (CPI A2)",
+"CESI. Mineure sciences du numérique et informatique.":"CESI. Minor in digital science and computer science.",
+"BTS SIO, option SLAM":"BTS SIO (2-year IT degree), software development",
+"Lycée René Cassin, Strasbourg. Développement d'applications.":"Lycée René Cassin, Strasbourg. Application development.",
+"ANSSI. Les bases de la cybersécurité.":"ANSSI (French cybersecurity agency). Cybersecurity basics.",
+"Cisco. Menaces, protections et bonnes pratiques.":"Cisco. Threats, protections and best practices.",
+"Les bases de Linux et de la ligne de commande.":"Linux and command-line basics.",
+"Attestation PIX":"PIX certificate",
+"Certification des compétences numériques.":"Official certification of digital skills.",
+"Le code comme base, la sécurité comme direction. Survolez une compétence pour voir où je l'ai utilisée.":"Code as my foundation, security as my direction. Hover over a skill to see where I used it.",
+"Mon angle":"My angle",
+"Je viens du code. Je sais comment une application est construite : la base de données, le serveur, l'interface. Pour protéger un système, il faut d'abord comprendre comment il fonctionne.":"I come from code. I know how an application is built: the database, the server, the interface. To protect a system, you first need to understand how it works.",
+"Ma direction":"My direction",
+"Réseau et sécurité":"Networking and security",
+"Connexion unique (SSO) avec Azure AD":"Single sign-on (SSO) with Azure AD",
+"VLAN, VLSM, routage statique, switch de niveau 3":"VLANs, VLSM, static routing, layer 3 switch",
+"Tunnel IPv6 sur IPv4, SLAAC":"IPv6 over IPv4 tunnel, SLAAC",
+"SSH, sécurité des ports, WPA2":"SSH, port security, WPA2",
+"Requêtes préparées, hachage des mots de passe":"Prepared statements, password hashing",
+"Certifications ANSSI, Cisco et Linux Essentials":"ANSSI, Cisco and Linux Essentials certifications",
+"Langages":"Programming languages",
+"Web et données":"Web and data",
+"Outils":"Tools",
+"Méthodes":"Methods",
+"Programmation objet, SOLID, design patterns":"Object-oriented programming, SOLID, design patterns",
+"Tests unitaires":"Unit testing",
+"Documentation, méthodes Agiles":"Documentation, Agile methods",
+"Disponible dès janvier 2027":"Available from January 2027",
+"Vous cherchez un stagiaire en cybersécurité ? Parlons-en.":"Looking for a cybersecurity intern? Let's talk.",
+"07 79 67 98 03":"+33 7 79 67 98 03",
+"Clic sur l'adresse : elle est copiée.":"Click the address to copy it.",
+"Mohamed Laaraj, haut de la page":"Mohamed Laaraj, back to top",
+"Présentation":"Introduction",
+"Internet, puis le datacenter, puis les 4 sites":"Internet, then the datacenter, then the 4 sites",
+"Petite simulation du Jeu de la Vie sur une grille dont les bords sont reliés":"Small Game of Life simulation on a grid with connected edges",
+"Les 4 modes de la station":"The station's 4 modes",
+"Télécharger mon CV":"Download my CV",
+"Mon CV (PDF)":"My CV (PDF, in French)",
+"Photo de Mohamed Laaraj":"Photo of Mohamed Laaraj"
+};
+
+var tn=[],at=[],w=document.createTreeWalker(document.documentElement,4,null),x;
+while((x=w.nextNode())){var pn=x.parentNode.nodeName;if(pn==="SCRIPT"||pn==="STYLE")continue;var k=x.nodeValue.trim();if(k&&EN[k])tn.push([x,x.nodeValue,x.nodeValue.replace(k,EN[k])])}
+document.querySelectorAll("[data-d],[data-o],[data-c],[aria-label],[alt]").forEach(function(el){["data-d","data-o","data-c","aria-label","alt"].forEach(function(a){var v=el.getAttribute(a);if(v&&EN[v])at.push([el,a,v,EN[v]])})});
+var lb=document.getElementById("lb");
+function setLang(l){LANG=l;var e=l==="en";tn.forEach(function(t){t[0].nodeValue=e?t[2]:t[1]});at.forEach(function(a){a[0].setAttribute(a[1],e?a[3]:a[2])});root.setAttribute("lang",l);lb.textContent=e?"FR":"EN";lb.setAttribute("aria-label",e?"Passer en français":"Switch to English");lab();
+togs.forEach(function(b){b.textContent=b.closest("article").classList.contains("open")?b.getAttribute("data-o"):b.getAttribute("data-c")});
+var pm=document.querySelector(".mode[aria-pressed=true]");if(pm)mdesc.textContent=pm.getAttribute("data-d");
+lines=e?LEN:LFR;total=tot();if(!typing)term.innerHTML=render(total)}
+lb.onclick=function(){var n=LANG==="en"?"fr":"en";setLang(n);try{localStorage.setItem("lang",n)}catch(e){}};
+try{if(localStorage.getItem("lang")==="en")setLang("en")}catch(e){}
+})();
+</script>
+</body>
+</html>
